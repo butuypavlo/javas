@@ -1,0 +1,7 @@
+Dont forget to replace 'YOUR_TELEGRAM_BOT_TOKEN' with your actual bot token
+To get the actual bot token, you need to create a bot on Telegram. To do that, follow these steps:
+
+Open Telegram and search for "BotFather."
+Start a chat with BotFather and use the /newbot command to create a new bot.
+BotFather will provide you with a bot token. Replace 'YOUR_TELEGRAM_BOT_TOKEN' in the bot.js file with this token.
+Run the bot
