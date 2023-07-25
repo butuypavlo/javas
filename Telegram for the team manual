@@ -1,0 +1,19 @@
+const TelegramBot = require('node-telegram-bot-api');
+
+// Replace 'YOUR_TELEGRAM_BOT_TOKEN' with your actual bot token obtained from BotFather
+const bot = new TelegramBot('YOUR_TELEGRAM_BOT_TOKEN', { polling: true });
+
+// Handle /start command
+bot.onText(/\/start/, (msg) => {
+  const chatId = msg.chat.id;
+  const firstName = msg.from.first_name;
+  bot.sendMessage(chatId, `Hello ${firstName}! Welcome to your bot!`);
+});
+
+// Handle incoming messages
+bot.on('message', (msg) => {
+  const chatId = msg.chat.id;
+  bot.sendMessage(chatId, 'Received your message: ' + msg.text);
+});
+
+console.log('Bot is running...');
